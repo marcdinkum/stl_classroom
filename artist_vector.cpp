@@ -6,6 +6,9 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <iterator>
+
 
 int main()
 {
@@ -47,6 +50,20 @@ std::vector<std::string>::iterator index;
   } // while
 
 
+  std::cout << std::endl;
+
+  // Sort vector
+  sort(artists.begin(),artists.end());
+
+  // Show again
+  std::cout << "Sorted database:\n";
+  index=artists.begin();
+  while(index != artists.end()){
+    std::cout << *index << std::endl;
+    index++;
+  } // while
+
+  std::cout << std::endl;
 
   return 0;
 } // main()
